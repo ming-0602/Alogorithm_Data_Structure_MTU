@@ -9,7 +9,6 @@ class DeckTest {
 
     @Test
     void allcard(){
-
         ArrayList<String> cards = new ArrayList<>();
         for(int i = 1; i < 14 ; i ++){
             cards.add(i + " of Hearts" );
@@ -17,11 +16,15 @@ class DeckTest {
             cards.add(i + " of Clubs" );
             cards.add(i + " of Spades" );
         }
+//        System.out.println(deck.getCards());
+        assertEquals(deck.getCards(),cards);
+    }
 
-        assertEquals(cards, Deck.class);
-
-
-
+    @Test
+    void shuffleTest(){
+        allcard();
+        deck.Shuffle();
+        System.out.println(deck);
 
     }
 
