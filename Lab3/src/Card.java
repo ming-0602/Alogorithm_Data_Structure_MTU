@@ -6,9 +6,7 @@ public class Card {
     public Card(int f, String s){
         face = f;
         suit = s;
-
     }
-
     public int getFace(){
         return face;
     }
