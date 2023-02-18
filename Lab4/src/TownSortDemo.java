@@ -1,8 +1,6 @@
-import java.util.Arrays;
-import java.util.Collections;
+import java.util.*;
 
 import java.util.Collections;
-import java.util.ArrayList;
 
 public class TownSortDemo {
     public static void main(String[] args) {
@@ -19,6 +17,11 @@ public class TownSortDemo {
         System.out.println("\nSorted List");
         displayArray(towns);
 
+        Scanner scn = new Scanner(System.in);
+        System.out.print("\nPlease Enter Town Name: ");
+        String input = scn.nextLine();
+        System.out.println(findtownbyNameArray(towns, input));
+
         ArrayList<Town> towns1 = new ArrayList<Town>();
 
         towns1.add(new Town("Tralee", "Kerry", 23000));
@@ -33,6 +36,14 @@ public class TownSortDemo {
         Collections.sort(towns1);
         System.out.println("\nSorted ArrayList");
         displayArrayList(towns1);
+
+        System.out.println("\nPlease Enter a Name: ");
+        String input2 = scn.nextLine();
+        System.out.println(findtownbyNameArrayList(towns1,input2));
+
+
+
+
     }
 
     private static void displayArray(Town[] towns) {
@@ -46,4 +57,24 @@ public class TownSortDemo {
             System.out.println(t);
         }
     }
+
+    private static int findtownbyNameArray(Town[] towns, String name){//binary search
+        String[] names = new String[towns.length];//create array
+        for (int i = 0; i < towns.length; i++) {
+            names[i] = towns[i].getName();//add into array
+        }
+        return Arrays.binarySearch(names,name);//original java function binary search
+
+    }
+
+    private static int findtownbyNameArrayList(ArrayList<Town> towns1, String name){
+        ArrayList<String> temTown = new ArrayList<>();//create a list and put everything into it
+        for (Town town: towns1) {
+            temTown.add(town.getName());//getneme() is just a java function to get the string
+        }
+        return Collections.binarySearch(temTown, name);
+    }
+
+
+
 }

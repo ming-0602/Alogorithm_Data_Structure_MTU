@@ -1,6 +1,9 @@
 import org.junit.jupiter.api.Test;
 
+
+import static java.lang.Long.sum;
 import static org.junit.jupiter.api.Assertions.*;
+
 
 class recursiveTest {
 
@@ -12,8 +15,9 @@ class recursiveTest {
 
     @Test
     void testreverseString(){
-        String input = recursive.reverse("Hello");
+        String input = recursive.reverseStr("Hello");
         assertEquals("olleH",input);
+        System.out.println(input);
     }
 
     @Test
@@ -27,6 +31,13 @@ class recursiveTest {
         int[] input = {1,2,3,4};
         int[] expected = {1,2,3};
         assertEquals(expected,input);
+    }
+
+    @Test
+    void testsum(){
+        int[] input = {1,2,3,4};
+        int values = recursive.sum(input);
+        assertEquals(10, values);
     }
 
 
