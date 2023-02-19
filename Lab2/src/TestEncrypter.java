@@ -7,5 +7,7 @@ public class TestEncrypter {
 
         System.out.println(Encrypter.encryptCaesarCipher("ABCD", 3));
         System.out.println(Encrypter.decryptCaesarCipher("DEFG", 3));
+
+        System.out.println(Math.ceilDiv(12,3));
     }
 }
