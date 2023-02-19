@@ -4,7 +4,7 @@ public class Encrypter {
 
     public static String encryptRowColumn(String plaintext, int numColumns){
         plaintext = plaintext.replaceAll(" ", "").toUpperCase();
-        int numRow = Math.ceilDiv(plaintext.length(),numColumns);
+        int numRow = Math.ceilDiv(plaintext.length(),numColumns); //Just Divide Function
 
         if(plaintext.length() < numRow * numColumns){
             while (plaintext.length() < numRow * numColumns){
