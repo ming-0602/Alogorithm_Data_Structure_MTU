@@ -10,9 +10,9 @@ public class MyArrays {
             int j = i;
 //            int val = a[i];
             while(j > 0 && a[j] < a[j-1]){
-                int temp = a[j];
-                a[j] = a[j-1];
-                a[j-1] = temp;
+                int temp = a[j]; //store the value into a variable
+                a[j] = a[j-1]; //declare emlement into element -1
+                a[j-1] = temp;//make temp element and element -1 swap space
 //                a[j+1] = a[j];
                 j -= 1;
 //                a[j+1] = val;
