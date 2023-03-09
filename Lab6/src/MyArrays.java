@@ -35,23 +35,40 @@ public class MyArrays {
 //    }
 
     //[ball, boy, apple, car, train, open]
-    public static void insertionSort(String[] a){
-        for (int i = 0; i < a.length-1; i++) {
+//    public static void insertionSort(String[] a){
+//        for (int i = 0; i < a.length-1; i++) {
+//            int j = i+1;
+//            while(j < a[i].length()-1){
+//                if(a[i].charAt(j) > a[j].charAt(j)){
+//                    String temp = a[i];
+//                    a[i] = a[j];
+//                    a[j] = temp;
+//                }
+//                else if(a[i].charAt(j) == a[j].charAt(j)){
+//                    j++;
+//                }
+//            }
+//
+//        }
+//    }
 
-            int j = i+1;
-            while(j < a[i].length()-1){
-                if(a[i].charAt(j) > a[j].charAt(j)){
-                    String temp = a[i];
-                    a[i] = a[j];
-                    a[j] = temp;
-                }
-                else if(a[i].charAt(j) == a[j].charAt(j)){
-                    j++;
-                }
+    public static void insertionSort(int[] a){
+        for(int i = 1; i < a.length-1; i++){
+            int val = a[i];
+            int j = i -1;
+            while(j >= 0 && a[j] > val){
+                a[j+ 1] = a[j];
+                j--;
             }
-
+            a[j+1] = val;
         }
     }
+
+    public static void binarySearch(){
+
+    }
+
+
 }
 
 
