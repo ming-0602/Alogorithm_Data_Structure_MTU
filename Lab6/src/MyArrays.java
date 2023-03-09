@@ -64,9 +64,10 @@ public class MyArrays {
         }
     }
 
-    public static void binarySearch(){
+    public static void binarySearch(int[] a, int target){
+            insertionSort(a);
+        }
 
-    }
 
 
 }
