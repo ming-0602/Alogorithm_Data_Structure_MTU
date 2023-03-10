@@ -31,4 +31,10 @@ class MyArraysTest {
         assertEquals(Arrays.toString(expected), Arrays.toString(a));
     }
 
+    @Test
+    void testbinary(){
+        int[] a = {4,3,2,1,5};
+        assertEquals(-1,MyArrays.binarySearch(a, 8));
+    }
+
 }

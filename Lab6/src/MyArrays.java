@@ -64,12 +64,32 @@ public class MyArrays {
         }
     }
 
-    public static void binarySearch(int[] a, int target){
-            insertionSort(a);
+    public static int binarySearch(int[] a, int target){
+        if(target > a.length){
+            return -1;
+        }
+        for(int i = 1; i < a.length-1; i++){
+            int val = a[i];
+            int j = i -1;
+            while(j >= 0 && a[j] > val){
+                a[j+ 1] = a[j];
+                j--;
+            }
+            a[j+1] = val;
         }
 
-
-
+        int half = a.length/2;
+        for (int i = 0; i < half ; i++) {
+            if(target > a[half]){
+                half++;
+            } else if (target < a[half]) {
+                half--;
+            } else if (target != a[half]) {
+                return -1;
+            }
+        }
+        return half;
+    }
 }
 
 
