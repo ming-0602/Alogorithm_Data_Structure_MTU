@@ -9,7 +9,9 @@
       <module fileurl="file://$PROJECT_DIR$/Lab4/Lab4.iml" filepath="$PROJECT_DIR$/Lab4/Lab4.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lab5/Lab5.iml" filepath="$PROJECT_DIR$/Lab5/Lab5.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lab6/Lab6.iml" filepath="$PROJECT_DIR$/Lab6/Lab6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lab7/Lab7.iml" filepath="$PROJECT_DIR$/Lab7/Lab7.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestAlogo/TestAlogo.iml" filepath="$PROJECT_DIR$/TestAlogo/TestAlogo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tem/tem.iml" filepath="$PROJECT_DIR$/tem/tem.iml" />
     </modules>
   </component>
 </project>
